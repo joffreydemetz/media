@@ -19,79 +19,79 @@ use JDZ\Helpers\StringHelper;
  */
 class MediaFile extends TreeItem
 {
-	/**
+  /**
    * Fullpath to the file
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $fullpath;
   
-	/**
+  /**
    * Root folder
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $root;
   
- 	/**
+   /**
    * The list of mimes to display
    * 
-	 * @var    array 
-	 */
+   * @var    array 
+   */
   protected $mimes;
   
-	/**
+  /**
    * File path relative to the root folder
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $relpath;
   
-	/**
+  /**
    * File name
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $filename;
   
-	/**
+  /**
    * File name with no extension
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $name;
   
-	/**
+  /**
    * File extension
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $extension;
   
-	/**
+  /**
    * File type (image, pdf)
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $ftype;
   
-	/**
+  /**
    * File size (Ko)
    * 
-	 * @var    float 
-	 */
+   * @var    float 
+   */
   protected $filesize;
   
-	/**
+  /**
    * File unique alias
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $alias;
   
-	/**
-	 * {@inheritDoc}
-	 */
+  /**
+   * {@inheritDoc}
+   */
   public function toObject()
   {
     $data = (array) parent::toObject();
@@ -106,9 +106,9 @@ class MediaFile extends TreeItem
     return (object)$data;
   }
   
-	/**
-	 * {@inheritDoc}
-	 */
+  /**
+   * {@inheritDoc}
+   */
   protected function load()
   {
     $app = Callisto();
@@ -149,11 +149,11 @@ class MediaFile extends TreeItem
     $this->valid = true;
   }
   
-	/**
-	 * Get the text label
+  /**
+   * Get the text label
    * 
-   * @return 	string
-	 */
+   * @return   string
+   */
   protected function getFilename()
   {
     return $this->name.' ('.$this->extension.')';

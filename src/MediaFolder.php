@@ -19,51 +19,51 @@ use JDZ\Helpers\StringHelper;
  */
 class MediaFolder extends TreeGroup 
 {
-	/**
+  /**
    * Fullpath to the file
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $fullpath;
   
-	/**
+  /**
    * Root folder
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $root;
   
- 	/**
+   /**
    * The list of mimes to display
    * 
-	 * @var    array 
-	 */
+   * @var    array 
+   */
   protected $mimes;
   
-	/**
+  /**
    * Folder path relative to the root folder
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $relpath;
   
-	/** 
+  /** 
    * Folder name
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $folder;
   
-	/**
+  /**
    * Folder unique alias
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $alias;
   
-	/**
-	 * {@inheritDoc}
-	 */
+  /**
+   * {@inheritDoc}
+   */
   protected function load()
   {
     $this->fullpath = Path::clean($this->fullpath);
@@ -119,11 +119,11 @@ class MediaFolder extends TreeGroup
     $this->valid = true;
   }
   
-	/**
-	 * Get the text label
+  /**
+   * Get the text label
    * 
-   * @return 	string 
-	 */
+   * @return   string 
+   */
   protected function getFoldername()
   {
     if ( $this->folder === '' ){

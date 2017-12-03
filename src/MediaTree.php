@@ -19,30 +19,30 @@ use JDZ\Filesystem\Path;
  */
 class MediaTree extends Tree
 {
-	/**
+  /**
    * Root path
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $root;
   
-	/**
+  /**
    * Media path
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $fullpath;
   
- 	/**
+   /**
    * The list of mimes to display
    * 
-	 * @var    array 
-	 */
+   * @var    array 
+   */
   protected $mimes;
   
-	/**
-	 * {@inheritDoc}
-	 */
+  /**
+   * {@inheritDoc}
+   */
   protected function load()
   {
     $this->root = Path::clean($this->root);
