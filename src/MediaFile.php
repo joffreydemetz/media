@@ -89,9 +89,6 @@ class MediaFile extends TreeItem
    */
   protected $alias;
   
-  /**
-   * {@inheritDoc}
-   */
   public function toObject()
   {
     $data = (array) parent::toObject();
@@ -106,9 +103,6 @@ class MediaFile extends TreeItem
     return (object)$data;
   }
   
-  /**
-   * {@inheritDoc}
-   */
   protected function load()
   {
     $app = Callisto();
